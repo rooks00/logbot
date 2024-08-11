@@ -72,7 +72,7 @@ Retrieves all details for a config (Action Words, Channel_ID, and Last posted lo
 **Usage:** `!logbot_config_details <Name>` \
 **Example:** `!logbot_config_details Temp`
 
-### !logbot_config_add(ctx, *, items: str)
+### !logbot_config_add
 **Parameter count >= 3** \
 Creates a new config for querying and posting logs. `Name`, `Channel_ID`, and at least one action_word is required to create a config.\
 **Usage:** `!logbot_config_add <Name> <Channel_ID> <action_word_1> <action_word_2> ...` \
