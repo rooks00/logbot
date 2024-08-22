@@ -10,6 +10,9 @@ from dotenv import load_dotenv
 from discord.ext import commands
 from aiomysql import create_pool
 
+# User ID with bot command access
+ALLOWED_USER_ID = [438426740038172673] #ravicant
+
 # Load .env file
 load_dotenv()
 
@@ -253,7 +256,7 @@ async def on_ready():
 
 @discord_bot.event
 async def on_message(message):
-    if message.author == discord_bot.user:
+    if message.author.id not in ALLOWED_USER_ID:
         return
 
     content = message.content.lower()
